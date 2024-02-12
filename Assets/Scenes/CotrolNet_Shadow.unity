@@ -590,7 +590,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BackGroundColor: {r: 0.7122642, g: 0.7673966, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -731,7 +731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460293333}
-  - component: {fileID: 1460293335}
+  - component: {fileID: 1460293334}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -754,7 +754,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1460293335
+--- !u!114 &1460293334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1460293330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c650829b1fda743b3aa3f9a736f346, type: 3}
+  m_Script: {fileID: 11500000, guid: 66545cd7b6a374941b7ef41234c30138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   modelCamera: {fileID: 963194225}
@@ -773,10 +773,10 @@ MonoBehaviour:
   standardMaterial: {fileID: 2100000, guid: d3b35a347f83e804ea241684422fe2ec, type: 2}
   maxText: {fileID: 224494773}
   countText: {fileID: 306908270}
-  outpath: D:\desktop\output
-  captureWidth: 512
-  captureHeight: 512
-  captureInterval: 1
+  outpath: E:/desktop/output
+  captureWidth: 1024
+  captureHeight: 1024
+  captureInterval: 0.01
   randomCapture: 1
   maxCount: 30000
   isMiddleLoad: 0
