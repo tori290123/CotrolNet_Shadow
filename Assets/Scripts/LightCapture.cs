@@ -34,7 +34,7 @@ public class LightCapture : MonoBehaviour
         isCapturing = false;
         currentCount = 0;
 
-        string[] ignoreFolders = { };
+        string[] ignoreFolders = { "1400_people_crowds" };
 
         modelPaths = Directory.GetFiles("Assets/Resources", "*.obj", SearchOption.AllDirectories)
             .Where(path => !ignoreFolders.Any(folder => path.Contains(folder)))
@@ -45,7 +45,7 @@ public class LightCapture : MonoBehaviour
         if (randomCapture)
         {
             maxText.text = maxCount.ToString();
-            CreateDirectionFolders("Front", "Left", "Right", "Back", "Normal");
+            CreateDirectionFolders("Front", "Normal");
         }
         else
         {
@@ -101,14 +101,14 @@ public class LightCapture : MonoBehaviour
             directionalLight.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             CameraSavePng(modelCamera.GetComponent<Camera>(), "Front", currentCount.ToString("00000"));
 
-            directionalLight.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
-            CameraSavePng(modelCamera.GetComponent<Camera>(), "Left", currentCount.ToString("00000"));
+            //directionalLight.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            //CameraSavePng(modelCamera.GetComponent<Camera>(), "Left", currentCount.ToString("00000"));
 
-            directionalLight.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-            CameraSavePng(modelCamera.GetComponent<Camera>(), "Right", currentCount.ToString("00000"));
+            //directionalLight.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+            //CameraSavePng(modelCamera.GetComponent<Camera>(), "Right", currentCount.ToString("00000"));
 
-            directionalLight.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            CameraSavePng(modelCamera.GetComponent<Camera>(), "Back", currentCount.ToString("00000"));
+            //directionalLight.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            //CameraSavePng(modelCamera.GetComponent<Camera>(), "Back", currentCount.ToString("00000"));
 
             ChangeMaterials(plane, normalMaterial);
             ChangeMaterials(currentModel, normalMaterial);
